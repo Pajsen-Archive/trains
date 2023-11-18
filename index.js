@@ -6,13 +6,13 @@ const app = express();
 const port = 3000;
 
 // Set up static file serving from the 'Static' folder
-app.use('/', express.static(path.join(__dirname, 'Static')));
+app.use('/', express.static(path.join(__dirname, 'static')));
 
 
 
 // Define a route to serve the index.html file
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'Views', 'index.html'));
+    res.sendFile(path.join(__dirname, 'views', 'index.html'));
 });
 
 // Start the server
